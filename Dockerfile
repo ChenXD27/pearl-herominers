@@ -4,9 +4,9 @@ RUN apt update && apt install -y wget tar ca-certificates && rm -rf /var/lib/apt
 
 WORKDIR /miner
 
-RUN wget -q https://github.com/doktor83/SRBMiner-Multi/releases/download/3.3.4/srbminer_custom-3.3.4.tar \
-    && tar -xf srbminer_custom-3.3.4.tar --strip-components=1 \
+RUN wget -q https://github.com/doktor83/SRBMiner-Multi/releases/download/3.3.7/SRBMiner-Multi-3-3-7-Linux.tar.gz \
+    && tar -xzf SRBMiner-Multi-3-3-7-Linux.tar.gz --strip-components=1 \
     && chmod +x SRBMiner-MULTI \
-    && rm srbminer_custom-3.3.4.tar
+    && rm SRBMiner-Multi-3-3-7-Linux.tar.gz
 
 ENTRYPOINT ["/miner/SRBMiner-MULTI"]
