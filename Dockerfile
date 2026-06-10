@@ -9,7 +9,4 @@ RUN wget -q https://github.com/doktor83/SRBMiner-Multi/releases/download/3.3.7/S
     && chmod +x SRBMiner-MULTI \
     && rm SRBMiner-Multi-3-3-7-Linux.tar.gz
 
-COPY start.sh /start.sh
-RUN chmod +x /start.sh
-
-ENTRYPOINT ["/start.sh"]
+ENTRYPOINT ["/miner/SRBMiner-MULTI"]
