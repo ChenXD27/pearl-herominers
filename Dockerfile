@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.8.1-runtime-ubuntu22.04
+FROM nvidia/cuda:13.1.2-runtime-ubuntu22.04
 
 RUN apt update && apt install -y wget tar ca-certificates libc6 libstdc++6 && rm -rf /var/lib/apt/lists/*
 
